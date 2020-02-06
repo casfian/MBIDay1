@@ -1,0 +1,67 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Material App',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Material App Bar'),
+        ),
+        body: Center(
+          child: Column(
+            children: <Widget>[
+
+              RaisedButton.icon(
+                onPressed: () {
+                  //code
+                  print('RasiedButtonIcon clicked!');
+                }, 
+                icon: Icon(Icons.people), 
+                label: Text('Raised Button Icon'),
+              ),
+
+              IconButton(
+                icon: Icon(Icons.people), 
+                onPressed: () {
+                  //code
+                  print('IconButton clicked!');
+                }
+              ),
+
+              OutlineButton(
+                  child: Text('Outline Button'),
+                  onPressed: () {
+                    //code
+                    print('OutlineButton clicked!');
+                  }
+              ),
+
+              FlatButton(
+                child: Text('Flat Button'),
+                onPressed: () {
+                  //code
+                  print('FlatButton clicked!');
+                },
+              ),
+
+              RaisedButton(
+                child: Text('Raised Button'),
+                onPressed: () {
+                  //code
+                  print('RaisedButton clicked!');
+                },
+              ),
+
+
+
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
